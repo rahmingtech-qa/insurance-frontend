@@ -1,10 +1,13 @@
 pipeline {
-  agent any
+  agent none
   stages {
     stage('Test') {
+      agent { label 'nodejs-app' }
       steps {
+        container('nodejs') {
           echo 'Hello World!'   
-          sh 'npm -version'
+          sh 'java -version'
+        }
       }
     }
   }
