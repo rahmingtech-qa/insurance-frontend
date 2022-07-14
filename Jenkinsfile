@@ -4,7 +4,7 @@ pipeline {
     stage('Test') {
       steps {
           echo 'Hello World!'   
-          sh 'java -version'
+          sh 'npm -version'
       }
     }
   }
