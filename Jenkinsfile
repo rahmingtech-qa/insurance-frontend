@@ -6,7 +6,7 @@ pipeline {
       steps {
         container('nodejs') {
           echo 'Hello World!'   
-          sh 'nvm -version'
+          sh 'node -version'
         }
       }
     }
